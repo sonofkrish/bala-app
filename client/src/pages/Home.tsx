@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axios from '../util/axios';
+
 function Home() {
   const [home, setHome] = useState('Hello World!');
-  axios = axios.create({ baseURL: "http://191.96.57.162/api" });
   useEffect(() => {
     async function getHomeContent() {
       try {
@@ -14,11 +14,7 @@ function Home() {
     }
     getHomeContent();
   }, []);
-  return (
-    <div>
-      {home}
-    </div>
-  );
+  return <h1>{home}</h1>;
 }
 
 export default Home;

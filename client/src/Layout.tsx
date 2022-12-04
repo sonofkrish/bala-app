@@ -1,7 +1,4 @@
-import {
-  Link,
-  Outlet,
-} from "react-router-dom";
+import { Link, Outlet } from 'react-router-dom';
 
 function Layout() {
   return (
@@ -10,7 +7,6 @@ function Layout() {
         <Link to="/">Home</Link>
         &nbsp;|&nbsp;
         <Link to="/about">About</Link>
-        
       </nav>
       <Outlet />
     </>
