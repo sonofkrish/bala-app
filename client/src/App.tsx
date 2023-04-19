@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { FluentProvider, teamsLightTheme } from '@fluentui/react-components';
 import Home from './pages/Home';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
@@ -19,7 +20,9 @@ export function App() {
 export function WrappedApp() {
   return (
     <BrowserRouter>
-      <App />
+      <FluentProvider theme={teamsLightTheme}>
+        <App />
+      </FluentProvider>
     </BrowserRouter>
   );
 }

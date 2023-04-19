@@ -1,10 +1,10 @@
 import { Link, Outlet } from 'react-router-dom';
-import Logo from './assets/logo.svg';
+import Header from './components/header';
 
 function Layout() {
   return (
     <>
-      <img src={Logo} width="24" height="24" alt="Tracker" />
+      <Header />
       <nav>
         <Link to="/">Home</Link>
         &nbsp;|&nbsp;
