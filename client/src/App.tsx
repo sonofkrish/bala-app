@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { FluentProvider, teamsLightTheme } from '@fluentui/react-components';
+import { ThemeProvider } from '@emotion/react';
+import { CssBaseline } from '@mui/material';
+import theme from './theme';
 import Home from './pages/Home';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
@@ -20,9 +22,10 @@ export function App() {
 export function WrappedApp() {
   return (
     <BrowserRouter>
-      <FluentProvider theme={teamsLightTheme}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
         <App />
-      </FluentProvider>
+      </ThemeProvider>
     </BrowserRouter>
   );
 }
