@@ -1,9 +1,9 @@
-import Logo from '../../../assets/logo3.png';
+import Logo from '../../logo';
 
 function Header() {
   return (
     <div>
-      <img src={Logo} width="48" height="48" alt="Tracker" />
+      <Logo />
     </div>
   );
 }
