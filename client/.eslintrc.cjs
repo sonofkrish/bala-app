@@ -23,12 +23,8 @@ module.exports = {
     'react/react-in-jsx-scope': 0,
     'react/jsx-props-no-spreading': 'off',
     'react/prop-types': 'off',
+    'react/require-default-props': 'off',
     'import/prefer-default-export': 'off',
-    'no-restricted-exports': [
-      'error',
-      {
-        restrictedNamedExports: ['then'],
-      },
-    ],
+    'no-restricted-exports': ['error'],
   },
 };

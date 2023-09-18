@@ -1,7 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { ThemeProvider } from '@emotion/react';
-import { CssBaseline } from '@mui/material';
-import theme from './theme';
+import { ThemeProvider } from './theme';
 import Home from './pages/Home';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
@@ -22,8 +20,7 @@ export function App() {
 export function WrappedApp() {
   return (
     <BrowserRouter>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
+      <ThemeProvider>
         <App />
       </ThemeProvider>
     </BrowserRouter>
