@@ -1,20 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import axios from '../util/axios';
+import { Helmet } from 'react-helmet-async';
 
-function Home() {
-  const [home, setHome] = useState('Hello World!');
-  useEffect(() => {
-    async function getHomeContent() {
-      try {
-        const response = await axios.get('/');
-        setHome(response.data);
-      } catch (error) {
-        console.error(error);
-      }
-    }
-    getHomeContent();
-  }, []);
-  return <h1>{home}</h1>;
+import HomeView from '../sections/home/home-view';
+
+function HomePage() {
+  return (
+    <>
+      <Helmet>
+        <title>Balasubramani K - Web Developer</title>
+      </Helmet>
+      <HomeView />
+    </>
+  );
 }
 
-export default Home;
+export default HomePage;

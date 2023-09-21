@@ -25,6 +25,7 @@ module.exports = {
     'react/prop-types': 'off',
     'react/require-default-props': 'off',
     'import/prefer-default-export': 'off',
+    'no-use-before-define': 'off',
     'no-restricted-exports': ['error'],
   },
 };
