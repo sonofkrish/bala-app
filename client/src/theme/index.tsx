@@ -6,6 +6,7 @@ import {
   ThemeOptions,
 } from '@mui/material/styles';
 import { palette } from './palette';
+import { typography } from './typography';
 import { componentsOverrides } from './overrrides';
 
 type Props = {
@@ -15,6 +16,7 @@ type Props = {
 export default function ThemeProvider({ children }: Props) {
   const theme = createTheme({
     palette: palette('light'),
+    typography,
   } as ThemeOptions);
 
   theme.components = merge(componentsOverrides(theme));

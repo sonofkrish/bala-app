@@ -23,7 +23,7 @@ const Logo = forwardRef<HTMLDivElement, LogoProps>(
       >
         <g
           transform="translate(0.000000,360.000000) scale(0.100000,-0.100000)"
-          fill={PRIMARY_MAIN}
+          fill="#2d2e32"
           stroke="none"
         >
           <path

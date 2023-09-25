@@ -1,4 +1,4 @@
-import { useTheme } from '@mui/material/styles';
+import { styled, useTheme } from '@mui/material/styles';
 import { AppBar, Container, Toolbar } from '@mui/material';
 import Box from '@mui/material/Box';
 import { Logo } from '../../components/logo';
@@ -7,12 +7,16 @@ import { HEADER } from '../config-layout';
 import { bgBlur } from '../../theme/css';
 
 import { useOffSetTop } from '../../hooks/use-off-set-top';
-import { useResponsive } from '../../hooks/use-responsive';
 
+const StyledLogo = styled(Logo)(() => ({
+  transition: 'transform .25s ease-in-out',
+  '&:hover': {
+    transform: 'scale(1.2) rotate(10deg)',
+  },
+}));
 export default function Header() {
   const theme = useTheme();
-  const mdUp = useResponsive('up', 'md');
-  const offsetTop = useOffSetTop(HEADER.H_DESKTOP);
+  const offsetTop = useOffSetTop(48);
 
   return (
     <AppBar>
@@ -35,7 +39,7 @@ export default function Header() {
         }}
       >
         <Container sx={{ height: 1, display: 'flex', alignItems: 'center' }}>
-          <Logo />
+          <StyledLogo />
           <Box sx={{ flexGrow: 1 }} />
         </Container>
       </Toolbar>
