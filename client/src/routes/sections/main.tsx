@@ -4,7 +4,7 @@ import MainLayout from '../../layouts/main/layout';
 
 import SplashScreen from '../../components/loading-screen/splash-screen';
 
-export const HomePage = lazy(() => import('../../pages/home'));
+export const HomePage = lazy(() => import('../../pages/Home'));
 const Page404 = lazy(() => import('../../pages/NotFound'));
 
 export const mainRoutes = [

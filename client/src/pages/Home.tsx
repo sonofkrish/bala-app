@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 
 import HomeView from '../sections/home/view/home-view';
 
-function HomePage() {
+function Home() {
   return (
     <>
       <Helmet>
@@ -13,4 +13,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default Home;
